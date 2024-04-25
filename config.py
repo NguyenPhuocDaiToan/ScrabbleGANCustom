@@ -4,7 +4,7 @@ import torch
 class Config:
     # 'iam_lines,iam_words,vietnamese,vnondb_lines' (or 'all')
     dataset = "iam_lines,iam_words,vietnamese,vnondb_lines"
-    data_folder_path = "./data"  # relative to ./data/
+    data_folder_path = "./data"  # use to run prepare_dataset.pu
     img_h = 32
     char_w = 16
     partition = "train"  # 'train' / 'val' / 'test'
@@ -21,10 +21,11 @@ class Config:
     grad_alpha = 1
     grad_balance = True
 
-    data_file = f"./result/process_data.pkl"
+    root_path = ''
+    data_file = f".{root_path}/result/process_data.pkl"
     lexicon_file_name = "words.txt"
-    lexicon_file = f"./result/Lexicon/{lexicon_file_name}"
-    lmdb_output = f"./result/{dataset}_{partition}_data"
+    lexicon_file = f".{root_path}/result/Lexicon/{lexicon_file_name}"
+    lmdb_output = f".{root_path}/result/{dataset}_{partition}_data"
 
     architecture = "ScrabbleGAN"
     # Recognizer network

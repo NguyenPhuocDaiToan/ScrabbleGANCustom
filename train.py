@@ -24,6 +24,7 @@ np.random.seed(seed)
 
 level = logging.INFO
 format_log = '%(message)s'
+
 handlers = [logging.FileHandler('./output/output.log'), logging.StreamHandler()]
 logging.basicConfig(level=level, format=format_log, handlers=handlers)
 

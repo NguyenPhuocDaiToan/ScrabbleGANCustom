@@ -1,7 +1,7 @@
 import json
 
 # Đường dẫn tới file JSON và file văn bản đầu ra
-json_file = "E:\Image_Processing\ProcessIAM\IAM\labels.json"
+json_file = "E:\Image_Processing\ProcessIAM\labels.json"
 txt_file = "vietnamese.txt"
 
 # Đọc dữ liệu từ file JSON

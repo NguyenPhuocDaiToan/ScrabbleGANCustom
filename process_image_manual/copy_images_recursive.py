@@ -18,13 +18,13 @@ def copy_images_recursive(src_dir):
             shutil.copy(
                 item_path,
                 os.path.join(
-                    "E:\Image_Processing\ProcessIAM\IAM\dataset\iam_lines", item
+                    "E:\Image_Processing\ProcessIAM\dataset\iam_lines", item
                 ),
             )
 
 
 # Đường dẫn đến thư mục gốc chứa tất cả các thư mục con
-root_dir = "E:\Image_Processing\ProcessIAM\IAM\lines"
+root_dir = "E:\Image_Processing\ProcessIAM\lines"
 
 # Sao chép tất cả các ảnh từ thư mục gốc đến thư mục đầu ra
 print("start running...")

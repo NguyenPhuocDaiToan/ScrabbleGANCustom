@@ -6,7 +6,6 @@ from models.model_utils import BigGAN as BGAN
 from utils.data_utils import *
 import pandas as pd
 
-
 class Recognizer(nn.Module):
     def __init__(self, cfg):
         super(Recognizer, self).__init__()
@@ -73,10 +72,11 @@ class ScrabbleGAN(nn.Module):
 
         self.z_dist = torch.distributions.Normal(loc=0, scale=1.)
         self.z_dim = cfg.z_dim
-
+        root_path = cfg.root_path
+        
         lexicon_files = [
-            "E:\Image_Processing\ProcessIAM\IAM\data\lexicon\iam\words.txt",
-            # "E:\Image_Processing\ProcessIAM\IAM\data\lexicon\\vietnamese\words.txt",
+            "./data/lexicon/iam/words.txt",
+            "./data/lexicon/vietnamese/words.txt",
         ]
         self.fake_words = []
         for lexicon_file in lexicon_files:
