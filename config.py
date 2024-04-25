@@ -21,11 +21,10 @@ class Config:
     grad_alpha = 1
     grad_balance = True
 
-    root_path = ''
-    data_file = f".{root_path}/result/process_data.pkl"
-    lexicon_file_name = "words.txt"
-    lexicon_file = f".{root_path}/result/Lexicon/{lexicon_file_name}"
-    lmdb_output = f".{root_path}/result/{dataset}_{partition}_data"
+    root_path = "ScrabbleGANCustom"
+    data_file = f"/content/ScrabbleGAN/process_data.pkl"
+    lexicon_file = f"/content/ScrabbleGANCustom/data/lexicon/iam/words.txt"
+    lmdb_output = f"./content/result/{dataset}_{partition}_data"
 
     architecture = "ScrabbleGAN"
     # Recognizer network
@@ -52,6 +51,6 @@ class Config:
 
     # Noise vector
     z_dim = 128
-    num_chars = 74 if dataset == "IAM" else 93
+    num_chars = 170
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
