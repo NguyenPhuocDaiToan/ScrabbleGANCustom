@@ -10,7 +10,7 @@ class Config:
     partition = "train"  # 'train' / 'val' / 'test'
 
     batch_size = 8
-    num_epochs = 32
+    num_epochs = 1
     epochs_lr_decay = 100  # learning rate decay will be applied for last these many steps (should be <= num_epochs)
     resume_training = False
     start_epoch = 5
